@@ -6,8 +6,6 @@ import time
 # * User-defined functions
 from functions.load_keys import load_api_key
 
-# client_id = '0fa683ab3a2c4ff6982f77b266d9e758'
-# client_secret = 'ba1b9faa5b544d82bf283a65c7d85314'
 client_id, client_secret = load_api_key()
 
 client_credentials_manager = SpotifyClientCredentials(client_id, client_secret)
@@ -60,4 +58,4 @@ for track_id in ids:
 
 # * Create dataset
 df = pd.DataFrame(tracks, columns=['name', 'album', 'artist', 'release_date', 'length', 'popularity', 'acousticness', 'danceability', 'energy', 'instrumentalness', 'liveness', 'loudness', 'speechiness', 'tempo', 'time_signature'])
-df.to_csv('data/spotify.csv', sep = ',', index = False)
+df.to_csv('data/spotify_2.csv', sep = ',', index = False)
